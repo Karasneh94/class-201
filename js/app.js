@@ -1,6 +1,14 @@
 'use strict';
 
 let score = 0;
+let randomNum = (Math.floor(Math.random() * Math.floor(19))) + 1;
+let answers = [0,0,0,0,0,0,0,0,0,0];
+
+for (let i = 0; i < answers.length; i++) {
+    answers[i] = (Math.floor(Math.random() * Math.floor(24))) + 1;
+}
+console.log('cheat answer question 6 ' + randomNum);
+console.log('cheat answer question 7 ' + answers);
 
 let userName = prompt('Hello There! , What do you prefer us to call you?');
 alert('Before you enter my \' About Me \' page, I wanna see how well you know me by answering yes or no questions :D');
@@ -108,6 +116,59 @@ if (myGlasses === 'yes' || myGlasses === 'y') {
     alert(userName + '! Your answer is not valid 😡');
 }
 
+
+//##############################Question 6#################################//
+
+let index = 0;
+for (index; index < 4; index++) {
+    let userNum = prompt(userName + '! Guess the correct number between 1 and 20 inclusive');
+
+    if (randomNum === parseInt(userNum)) {
+        alert('Your answer is Correct ' + userName + '!, The number is ' + randomNum);
+        score++;
+        break;
+    } else if (randomNum > parseInt(userNum)) {
+
+        alert('Your answer is Lower than the currect answer, you have (' + (4 - (index + 1)) + ') Remaining Try(s)');
+
+    } else if (randomNum < parseInt(userNum)) {
+
+        alert('Your answer is Higher than the currect answer, you have (' + (4 - (index + 1)) + ') Remaining Try(s)');
+
+    }
+
+}
+
+if (index === 4) {
+
+    alert('Hrad Luck ' + userName + ' :( , The right answer is ' + randomNum);
+
+}
+
+//##############################Question 7#################################//
+
+let j = 0;
+for (j; j < 6; j++) {
+    let userNum = prompt(userName + '! Guess the correct number between 1 and 25 inclusive');
+
+    if (answers.indexOf(parseInt(userNum)) !== -1) {
+        alert('Your answer is Correct ' + userName + '!, The number is ' + userNum);
+        score++;
+        break;
+    } else if (answers.indexOf(parseInt(userNum)) === -1) {
+
+        alert('Your answer is Wrong, you have (' + (6 - (j + 1)) + ') Remaining Try(s)');
+
+    }
+
+}
+
+if (j === 6) {
+
+    alert('Hrad Luck ' + userName + ' :( , The right possible answers are ' + answers);
+
+}
+
 //#######################################################################//
 
-alert(userName + '!, Your score is: '+ score +'/5');
+alert(userName + '!, Your score is: ' + score + '/7');
