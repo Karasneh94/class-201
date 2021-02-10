@@ -119,21 +119,25 @@ alert(q4(myEyes));
 
 let myGlasses = prompt(userName + '! Do I wear glasses 👓?');
 myGlasses.toLowerCase();
+function q5(answer){
 
-if (myGlasses === 'yes' || myGlasses === 'y') {
+
+if (answer === 'yes' || answer === 'y') {
     score++;
     console.log('You Are Correct ' + userName + ' I Do wear glasses :)');
-    alert('You Are Correct ' + userName + ' ! , I Do wear glasses :)');
+    return('You Are Correct ' + userName + ' ! , I Do wear glasses :)');
 
-} else if (myGlasses === 'no' || myGlasses === 'n') {
+} else if (answers === 'no' || answer === 'n') {
 
     console.log('You Are ⛔ Wrong ⛔' + userName + ' ! ,I Do wear glasses :)');
-    alert('⛔ You Are Wrong ⛔ ' + userName + ' ! , I Do wear glasses :)');
+    return('⛔ You Are Wrong ⛔ ' + userName + ' ! , I Do wear glasses :)');
 
 } else {
     console.log(userName + '! Your answer is not valid 😡');
-    alert(userName + '! Your answer is not valid 😡');
+    return(userName + '! Your answer is not valid 😡');
 }
+}
+alert(q5(myGlasses));
 
 
 //##############################Question 6#################################//
