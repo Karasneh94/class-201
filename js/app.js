@@ -93,21 +93,27 @@ alert(q3(myHair));
 
 let myEyes = prompt(userName + '! My Eyes color are Blue🔵?');
 myEyes.toLowerCase();
+function q4(answer){
 
-if (myEyes === 'no' || myEyes === 'n') {
-    score++;
-    console.log('You Are Correct ' + userName + ' My Eyes Are Dark Brown :)');
-    alert('You Are Correct ' + userName + ' ! , My Eyes Are Dark Brown :)');
-
-} else if (myEyes === 'yes' || myEyes === 'y') {
-
-    console.log('⛔ You Are Wrong ' + userName + ' ! ,My Eyes Are Dark Brown :)');
-    alert('⛔ You Are Wrong ' + userName + ' ! , My Eyes Are Dark Brown :)');
-
-} else {
-    console.log(userName + '! Your answer is not valid 😡');
-    alert(userName + '! Your answer is not valid 😡');
+    if (answer === 'no' || answer === 'n') {
+        score++;
+        console.log('You Are Correct ' + userName + ' My Eyes Are Dark Brown :)');
+        return('You Are Correct ' + userName + ' ! , My Eyes Are Dark Brown :)');
+    
+    } else if (answer === 'yes' || answer === 'y') {
+    
+        console.log('⛔ You Are Wrong ' + userName + ' ! ,My Eyes Are Dark Brown :)');
+      return('⛔ You Are Wrong ' + userName + ' ! , My Eyes Are Dark Brown :)');
+    
+    } else {
+        console.log(userName + '! Your answer is not valid 😡');
+        return(userName + '! Your answer is not valid 😡');
+    
 }
+
+}
+alert(q4(myEyes));
+
 
 //##############################Question 5#################################//
 
