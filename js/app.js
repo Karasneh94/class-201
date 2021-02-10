@@ -143,13 +143,15 @@ alert(q5(myGlasses));
 //##############################Question 6#################################//
 
 let index = 0;
+function q6( ){
 for (index; index < 4; index++) {
     let userNum = prompt(userName + '! Guess the correct number between 1 and 20 inclusive');
 
     if (randomNum === parseInt(userNum)) {
-        alert('Your answer is Correct ' + userName + '!, The number is ' + randomNum);
-        score++;
-        break;
+        
+        score++;return('Your answer is Correct ' + userName + '!, The number is ' + randomNum);
+        
+       
     } else if (randomNum > parseInt(userNum)) {
 
         alert('Your answer is Lower than the currect answer, you have (' + (4 - (index + 1)) + ') Remaining Try(s)');
@@ -159,14 +161,17 @@ for (index; index < 4; index++) {
         alert('Your answer is Higher than the currect answer, you have (' + (4 - (index + 1)) + ') Remaining Try(s)');
 
     }
+    if (index === 4) {
 
+        alert('Hrad Luck ' + userName + ' :( , The right answer is ' + randomNum);
+    
+    }
 }
-
-if (index === 4) {
-
-    alert('Hrad Luck ' + userName + ' :( , The right answer is ' + randomNum);
-
 }
+alert(q6( ));
+
+
+
 
 //##############################Question 7#################################//
 
